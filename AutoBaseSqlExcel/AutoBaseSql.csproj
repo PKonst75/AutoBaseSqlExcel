@@ -1,0 +1,2314 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C58032B-02CD-4BDA-B9D4-02CC96415AA4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>AutoBaseSql</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutoBaseSql</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetPersonal.cs">
+      <DependentUpon>DataSetPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPersonal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbCardReportStaffSellary.cs" />
+    <Compile Include="Displaer\Display.cs" />
+    <Compile Include="Displaer\DisplayCard.cs" />
+    <Compile Include="Displaer\DisplayStruct.cs" />
+    <Compile Include="ExcelReports\ComplexReport.cs" />
+    <Compile Include="ExcelReports\ComplexReportData.cs" />
+    <Compile Include="ExelCardReportStaffSellary.cs" />
+    <Compile Include="ReadTextStorage.cs" />
+    <Compile Include="UserInterface\UICard.cs" />
+    <Compile Include="Print\DocumentPrintSchemaElement.cs" />
+    <Compile Include="Print\PrintableTable.cs" />
+    <Compile Include="Print\PrintableTableCell.cs" />
+    <Compile Include="Print\PrintableTableRow.cs" />
+    <Compile Include="Print\PrintRD37.cs" />
+    <Compile Include="Print\PrintCommonHeadTest.cs" />
+    <Compile Include="Print\PrintCard.cs" />
+    <Compile Include="Print\PrintDocumentBase.cs" />
+    <Compile Include="Print\PrintDrawingBase.cs" />
+    <Compile Include="Print\PrintRD37Act.cs" />
+    <Compile Include="Print\PrintTest.cs" />
+    <Compile Include="Print\PrintCardWorkOrder.cs" />
+    <Compile Include="Print\DocumentPrintSchema.cs" />
+    <Compile Include="Print\_Print.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TestDataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDataGrid.Designer.cs">
+      <DependentUpon>TestDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxtClasses\TxtCard.cs" />
+    <Compile Include="WindowsFormCommon.cs" />
+    <Content Include="App.ico" />
+    <Content Include="BitmapAuto.bmp" />
+    <Content Include="BitmapAutoPrice.bmp" />
+    <Content Include="BitmapBin.bmp" />
+    <Content Include="BitmapCheck.bmp" />
+    <Content Include="BitmapDel.bmp" />
+    <Content Include="BitmapDetailReturn.bmp" />
+    <Content Include="BitmapDownArrow.bmp" />
+    <Content Include="BitmapFace.bmp" />
+    <Content Include="BitmapIconFolder.bmp" />
+    <Content Include="BitmapIconWorkElement.bmp" />
+    <Content Include="BitmapImplementBack.bmp" />
+    <Content Include="BitmapJournal.bmp" />
+    <Content Include="BitmapNewCode.bmp" />
+    <Content Include="BitmapNoBill.bmp" />
+    <Content Include="BitmapNoFace.bmp" />
+    <Content Include="BitmapNoOil.bmp" />
+    <Content Include="BitmapOil.bmp" />
+    <Content Include="BitmapPrice.bmp" />
+    <Content Include="BitmapStorageMove.bmp" />
+    <Content Include="Dot.ico" />
+    <Content Include="GreenSquare.ico" />
+    <Content Include="Icon1.ico" />
+    <Content Include="IconFolder.ico" />
+    <Content Include="IconNew.ico" />
+    <Content Include="manage_card.bmp" />
+    <Content Include="RedSquare.ico" />
+    <Content Include="Transparent.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calculator.cs" />
+    <Compile Include="CalculatorCard.cs" />
+    <Compile Include="Calculators.cs" />
+    <Compile Include="ClassBarCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="COMPortReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CS_LicenceVehicle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CS_Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CS_PTS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CS_SellInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DaCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data_SQL_PTS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Db.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAccountDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAccountDetailItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoColors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoComplect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoFactura.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoIncom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoSell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoSubmodel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbAutoType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbBrand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardRecomend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardReport1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCardWorkPersonal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCategoryCost.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCategoryPrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCategorySearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbCreditBank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDbfKladr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailIncom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailIncomDetailed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailIncomDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailOutcom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailOutcomDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDetailStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDirectoryWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbDiscount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbEngineType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelAnaliz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelAntirust.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelAutoReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelCardEnsurance.cs" />
+    <Compile Include="DbExcelDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelNewOrder.cs" />
+    <Compile Include="DbExcelProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelRD372019.cs" />
+    <Compile Include="DbExcelRD372019Act.cs" />
+    <Compile Include="DbExcelRD372019CheckOutList.cs" />
+    <Compile Include="DbExcelRD372019Claim.cs" />
+    <Compile Include="DbExcelRD372019ContractOrder.cs" />
+    <Compile Include="DbExcelRD372019Storage.cs" />
+    <Compile Include="DbExcelReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelReportFBS.cs" />
+    <Compile Include="DbExcelReportSell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelReportTo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelSalary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelStuffProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelWorkshopWorks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbExcelRD372019WorkOrder.cs" />
+    <Compile Include="DbFirm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbGuarantyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbJournal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbKladr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbOptionAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPartner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPartnerGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintAcceptanceReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintAcceptanceReportEmpty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintAcceptanceReportP2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintAcceptanceReportV01.cs" />
+    <Compile Include="DbPrintAutoStorageAvaliable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintCard1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintClaimP2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintDiagnosticList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintDocHead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintDopList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintGivingout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintGivingoutP2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintGuarantee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintGuarantyGM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintGuarantyKIA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintInspection2009.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintInspectionUndercarriage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintInvite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintOperations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintOptionsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintQuestionnaireAvtovaz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintReglament.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintReglament_v1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBPrintReportCallService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintReportCash.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintReportCash_1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintSalary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintStorageRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintTamplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintUndercarriageP2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintWarrant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintWarrantTmp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbPrintWarrantV02.cs" />
+    <Compile Include="DbProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbQuestionnaire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbReportCardWorkDelete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbRequestionPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbReserve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSql.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoPts.cs" />
+    <Compile Include="DbSqlAutoReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoSell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlAutoSellServ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlBrand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardDetailOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardMarkEndWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardRecomendation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardWorkComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCardWorkend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCatalogueParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlCommonReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlDiscount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlGuarantyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlIncomingCall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlInvoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlInvoicePay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlLicenceVehicle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlListAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartnerConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartnerContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartnerJuridical.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartnerPerson.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPartnerProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlPassport.cs" />
+    <Compile Include="DbSqlPayment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlSellInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlServiceOuter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlStorageDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlStorageIncom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlStorageIncomDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlStorageRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlVariant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlWorkCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlWorkCollectionItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlWorkGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSqlWorkshop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbStorageGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbSubNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbTakeDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbTimeWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbTransmissionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWord.cs" />
+    <Compile Include="DbWordUtil.cs" />
+    <Compile Include="DbWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkGroupDirectoryWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkPlace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkPlaceJournal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbWorkshop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplayDtCard.cs" />
+    <Compile Include="DisplayDtPartner.cs" />
+    <Compile Include="DrDetailStoragePrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrReprot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrServiceProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrStorageMove.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrStuffProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DsProduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DsProductionDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DsProductionWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoOptionGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoOptionVariant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoPts.cs" />
+    <Compile Include="DtAutoReceive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoSell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtAutoSellServ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtBrand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCallToClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardDetailOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardMarkEndWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardRecomendation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardTimePause.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardWorkComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCardWorkend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCatalogueParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtCommonReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtDiscount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtGuarantyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtIncomingCall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtInvoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtInvoicePay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtLicensePlate.cs" />
+    <Compile Include="DtListAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtOrganization.cs" />
+    <Compile Include="DtPartner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPartnerConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPartnerContact.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPartnerJuridical.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPartnerPerson.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPartnerProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtPassport.cs" />
+    <Compile Include="DtSalary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtServiceOuter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtStorageDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtStorageIncom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtStorageIncomDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtStorageRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtTxtCard.cs" />
+    <Compile Include="DtTxtCardDetail.cs" />
+    <Compile Include="DtTxtCardWork.cs" />
+    <Compile Include="DtVariant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtWork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtWorkCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtWorkCollectionItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtWorkGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DtWorkshop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DT_Struct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DvVinCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error.cs" />
+    <Compile Include="ExcelCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardReport1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardReport2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardReport3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardWorkDelete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelCardWorkStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelModelCardReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExSerial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileIni.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoColorsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoComplect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoComplectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoFactoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoFacturaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoIncom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoPts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoPts.Designer.cs">
+      <DependentUpon>FormAutoPts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutoSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoSellList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoStorageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoStoragePure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoSubmodel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarCodeCN1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarCodeCN1.Designer.cs">
+      <DependentUpon>FormBarCodeCN1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarCodeGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarCodeLada1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarCodeLada1.Designer.cs">
+      <DependentUpon>FormBarCodeLada1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarCodeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCard1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardActionMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardDetailExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardExtend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCardSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCard_v01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatalogueParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoryCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreditBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreditBankList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDefectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailIncom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailIncomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailIncomListDetailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailOutcomDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailOutcomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailStorageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailStoragePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDirectoryWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiscountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplay.cs" />
+    <Compile Include="FormEngineType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEngineTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFirmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuarantyType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuarantyTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfoTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfoTransparent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJournalRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKladr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListAutoReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListCardAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListPartnerConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListPartnerContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListStorageRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageAutoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageAutoWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCategoryCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageClaim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageDirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageDirectoryWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagePartnerProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageStandart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageStorageIncomDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageWorks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartnerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartnerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartnerProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPassport.Designer.cs">
+      <DependentUpon>FormPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportStorageMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectCardDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectDataGuaranty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectDateInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectionKladr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectionType1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectionType2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectionType3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectNumberInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetMistake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStorageDetailBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStorageDetailMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStorageGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStorageGroupTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStorageV1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubmodelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTakeDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTakeDocumentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimeWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransmissionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransmissionTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateAutoReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePartnerContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateStorageRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateVariant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewSorageIncomDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkCollectionManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkPlaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWorkshopList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintAutoCoupon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Print\PrintCommon.cs" />
+    <Compile Include="SD_BarCodeCN_1.cs" />
+    <Compile Include="SD_BarCodeLada_1.cs" />
+    <Compile Include="TxtReadIncom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TxtReadPrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIFormCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIFormListCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Alarm_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_AutoAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_AutoComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_AutoOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_AutoSellServ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_CardWorkCommentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_CardWork_Comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Casher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Claim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_CommonReason_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Inspection_V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_LicencePlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_LicenceVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_LicenceVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_NaturalPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Payment_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_POS_AutoTiming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_POS_AutoTiming_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_POS_AutoTiming_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_PTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Selector_Array.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_SellInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_ServiceOuter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_ServiceOuter_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIF_Supervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIInquiryPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIYesNoPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_CallToClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Digit2Text.cs" />
+    <Compile Include="UI_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_InvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_InvoicePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_InvoicePayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="V1_DbSqlCardRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="V1_DtCardRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="V1_DtCardRateCall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="V1_UIF_CardRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V1_UIF_CardRateManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="COMPortReader.resx">
+      <DependentUpon>COMPortReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAccountDetail.resx">
+      <DependentUpon>FormAccountDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAccountDetailList.resx">
+      <DependentUpon>FormAccountDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuto.resx">
+      <DependentUpon>FormAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoColors.resx">
+      <DependentUpon>FormAutoColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoColorsList.resx">
+      <DependentUpon>FormAutoColorsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoComplect.resx">
+      <DependentUpon>FormAutoComplect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoComplectList.resx">
+      <DependentUpon>FormAutoComplectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoFactory.resx">
+      <DependentUpon>FormAutoFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoFactoryList.resx">
+      <DependentUpon>FormAutoFactoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoFactura.resx">
+      <DependentUpon>FormAutoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoFacturaList.resx">
+      <DependentUpon>FormAutoFacturaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoIncom.resx">
+      <DependentUpon>FormAutoIncom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoList.resx">
+      <DependentUpon>FormAutoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoModel.resx">
+      <DependentUpon>FormAutoModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoOrder.resx">
+      <DependentUpon>FormAutoOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoPts.resx">
+      <DependentUpon>FormAutoPts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoSell.resx">
+      <DependentUpon>FormAutoSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoSellList.resx">
+      <DependentUpon>FormAutoSellList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoStorageList.resx">
+      <DependentUpon>FormAutoStorageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoStoragePure.resx">
+      <DependentUpon>FormAutoStoragePure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoSubmodel.resx">
+      <DependentUpon>FormAutoSubmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoType.resx">
+      <DependentUpon>FormAutoType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoTypeList.resx">
+      <DependentUpon>FormAutoTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarCodeCN1.resx">
+      <DependentUpon>FormBarCodeCN1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarCodeGet.resx">
+      <DependentUpon>FormBarCodeGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarCodeLada1.resx">
+      <DependentUpon>FormBarCodeLada1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarCodeType.resx">
+      <DependentUpon>FormBarCodeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrand.resx">
+      <DependentUpon>FormBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCard.resx">
+      <DependentUpon>FormCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCard1.resx">
+      <DependentUpon>FormCard1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCard2.resx">
+      <DependentUpon>FormCard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardActionMake.resx">
+      <DependentUpon>FormCardActionMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardControl.resx">
+      <DependentUpon>FormCardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardDetailExchange.resx">
+      <DependentUpon>FormCardDetailExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardExtend.resx">
+      <DependentUpon>FormCardExtend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardList.resx">
+      <DependentUpon>FormCardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCardSimple.resx">
+      <DependentUpon>FormCardSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCard_v01.resx">
+      <DependentUpon>FormCard_v01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCatalogueParts.resx">
+      <DependentUpon>FormCatalogueParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoryCost.resx">
+      <DependentUpon>FormCategoryCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnection.resx">
+      <DependentUpon>FormConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreditBank.resx">
+      <DependentUpon>FormCreditBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreditBankList.resx">
+      <DependentUpon>FormCreditBankList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDefectList.resx">
+      <DependentUpon>FormDefectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetail.resx">
+      <DependentUpon>FormDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailIncom.resx">
+      <DependentUpon>FormDetailIncom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailIncomList.resx">
+      <DependentUpon>FormDetailIncomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailIncomListDetailed.resx">
+      <DependentUpon>FormDetailIncomListDetailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailList.resx">
+      <DependentUpon>FormDetailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailManage.resx">
+      <DependentUpon>FormDetailManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailOutcomDoc.resx">
+      <DependentUpon>FormDetailOutcomDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailOutcomList.resx">
+      <DependentUpon>FormDetailOutcomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailStorage.resx">
+      <DependentUpon>FormDetailStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailStorageList.resx">
+      <DependentUpon>FormDetailStorageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailStoragePrice.resx">
+      <DependentUpon>FormDetailStoragePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDirection.resx">
+      <DependentUpon>FormDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDirectoryWork.resx">
+      <DependentUpon>FormDirectoryWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiscount.resx">
+      <DependentUpon>FormDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiscountList.resx">
+      <DependentUpon>FormDiscountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEngineType.resx">
+      <DependentUpon>FormEngineType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEngineTypeList.resx">
+      <DependentUpon>FormEngineTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaults.resx">
+      <DependentUpon>FormFaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFirm.resx">
+      <DependentUpon>FormFirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFirmList.resx">
+      <DependentUpon>FormFirmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuarantyType.resx">
+      <DependentUpon>FormGuarantyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuarantyTypeList.resx">
+      <DependentUpon>FormGuarantyTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImage.resx">
+      <DependentUpon>FormImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfoTable.resx">
+      <DependentUpon>FormInfoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfoTransparent.resx">
+      <DependentUpon>FormInfoTransparent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJournal.resx">
+      <DependentUpon>FormJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJournalRecord.resx">
+      <DependentUpon>FormJournalRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKladr.resx">
+      <DependentUpon>FormKladr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListAuto.resx">
+      <DependentUpon>FormListAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListAutoReceive.resx">
+      <DependentUpon>FormListAutoReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListCardAction.resx">
+      <DependentUpon>FormListCardAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListPartner.resx">
+      <DependentUpon>FormListPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListPartnerConnection.resx">
+      <DependentUpon>FormListPartnerConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListPartnerContact.resx">
+      <DependentUpon>FormListPartnerContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListSell.resx">
+      <DependentUpon>FormListSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListStaff.resx">
+      <DependentUpon>FormListStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListStorageRequest.resx">
+      <DependentUpon>FormListStorageRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageAutoDetail.resx">
+      <DependentUpon>FormManageAutoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageAutoWork.resx">
+      <DependentUpon>FormManageAutoWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageBrand.resx">
+      <DependentUpon>FormManageBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCard.resx">
+      <DependentUpon>FormManageCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCategoryCost.resx">
+      <DependentUpon>FormManageCategoryCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageClaim.resx">
+      <DependentUpon>FormManageClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageDirection.resx">
+      <DependentUpon>FormManageDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageDirectoryWork.resx">
+      <DependentUpon>FormManageDirectoryWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageDiscount.resx">
+      <DependentUpon>FormManageDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageModel.resx">
+      <DependentUpon>FormManageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageOptions.resx">
+      <DependentUpon>FormManageOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagePartnerProperty.resx">
+      <DependentUpon>FormManagePartnerProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageStandart.resx">
+      <DependentUpon>FormManageStandart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageStorageIncomDoc.resx">
+      <DependentUpon>FormManageStorageIncomDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageWork.resx">
+      <DependentUpon>FormManageWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageWorks.resx">
+      <DependentUpon>FormManageWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModelList.resx">
+      <DependentUpon>FormModelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNode.resx">
+      <DependentUpon>FormNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOption.resx">
+      <DependentUpon>FormOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartner.resx">
+      <DependentUpon>FormPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartnerGroup.resx">
+      <DependentUpon>FormPartnerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartnerList.resx">
+      <DependentUpon>FormPartnerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartnerProperty.resx">
+      <DependentUpon>FormPartnerProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPassport.resx">
+      <DependentUpon>FormPassport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgress.resx">
+      <DependentUpon>FormProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestionnaire.resx">
+      <DependentUpon>FormQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportStorageMove.resx">
+      <DependentUpon>FormReportStorageMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectCardDetail.resx">
+      <DependentUpon>FormSelectCardDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectDataGuaranty.resx">
+      <DependentUpon>FormSelectDataGuaranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectDate.resx">
+      <DependentUpon>FormSelectDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectDateInterval.resx">
+      <DependentUpon>FormSelectDateInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectDateTime.resx">
+      <DependentUpon>FormSelectDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectElement.resx">
+      <DependentUpon>FormSelectElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectionKladr.resx">
+      <DependentUpon>FormSelectionKladr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectionList.resx">
+      <DependentUpon>FormSelectionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectionType1.resx">
+      <DependentUpon>FormSelectionType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectionType2.resx">
+      <DependentUpon>FormSelectionType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectionType3.resx">
+      <DependentUpon>FormSelectionType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectModel.resx">
+      <DependentUpon>FormSelectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectNumberInterval.resx">
+      <DependentUpon>FormSelectNumberInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectString.resx">
+      <DependentUpon>FormSelectString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSell.resx">
+      <DependentUpon>FormSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetMistake.resx">
+      <DependentUpon>FormSetMistake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff.resx">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaffList.resx">
+      <DependentUpon>FormStaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStorageDetailBalance.resx">
+      <DependentUpon>FormStorageDetailBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStorageDetailMove.resx">
+      <DependentUpon>FormStorageDetailMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStorageGroup.resx">
+      <DependentUpon>FormStorageGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStorageGroupTree.resx">
+      <DependentUpon>FormStorageGroupTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStorageV1.resx">
+      <DependentUpon>FormStorageV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubmodelList.resx">
+      <DependentUpon>FormSubmodelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubNode.resx">
+      <DependentUpon>FormSubNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTakeDocument.resx">
+      <DependentUpon>FormTakeDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTakeDocumentList.resx">
+      <DependentUpon>FormTakeDocumentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestSerial.resx">
+      <DependentUpon>FormTestSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimeWork.resx">
+      <DependentUpon>FormTimeWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransmissionType.resx">
+      <DependentUpon>FormTransmissionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransmissionTypeList.resx">
+      <DependentUpon>FormTransmissionTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateAuto.resx">
+      <DependentUpon>FormUpdateAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateAutoReceive.resx">
+      <DependentUpon>FormUpdateAutoReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateColor.resx">
+      <DependentUpon>FormUpdateColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateModel.resx">
+      <DependentUpon>FormUpdateModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePartner.resx">
+      <DependentUpon>FormUpdatePartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePartnerContact.resx">
+      <DependentUpon>FormUpdatePartnerContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateStaff.resx">
+      <DependentUpon>FormUpdateStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateStorageRequest.resx">
+      <DependentUpon>FormUpdateStorageRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateVariant.resx">
+      <DependentUpon>FormUpdateVariant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewSorageIncomDoc.resx">
+      <DependentUpon>FormViewSorageIncomDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewTest.resx">
+      <DependentUpon>FormViewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWork.resx">
+      <DependentUpon>FormWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkCollectionManagment.resx">
+      <DependentUpon>FormWorkCollectionManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkGroup.resx">
+      <DependentUpon>FormWorkGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkList.resx">
+      <DependentUpon>FormWorkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkManagment.resx">
+      <DependentUpon>FormWorkManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkPlace.resx">
+      <DependentUpon>FormWorkPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkPlaceList.resx">
+      <DependentUpon>FormWorkPlaceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkSelect.resx">
+      <DependentUpon>FormWorkSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkSelection.resx">
+      <DependentUpon>FormWorkSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkshop.resx">
+      <DependentUpon>FormWorkshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWorkshopList.resx">
+      <DependentUpon>FormWorkshopList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDataGrid.resx">
+      <DependentUpon>TestDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIFormCall.resx">
+      <DependentUpon>UIFormCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIFormListCalls.resx">
+      <DependentUpon>UIFormListCalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Alarm_List.resx">
+      <DependentUpon>UIF_Alarm_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_AutoAlarm.resx">
+      <DependentUpon>UIF_AutoAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_AutoComment.resx">
+      <DependentUpon>UIF_AutoComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_AutoOption.resx">
+      <DependentUpon>UIF_AutoOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_AutoSellServ.resx">
+      <DependentUpon>UIF_AutoSellServ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_CardWorkCommentList.resx">
+      <DependentUpon>UIF_CardWorkCommentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_CardWork_Comment.resx">
+      <DependentUpon>UIF_CardWork_Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Casher.resx">
+      <DependentUpon>UIF_Casher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Claim.resx">
+      <DependentUpon>UIF_Claim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_CommonReason_List.resx">
+      <DependentUpon>UIF_CommonReason_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Inspection_V1.resx">
+      <DependentUpon>UIF_Inspection_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_LicencePlate.resx">
+      <DependentUpon>UIF_LicencePlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_LicenceVehicle.resx">
+      <DependentUpon>UIF_LicenceVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_LicenceVehicleList.resx">
+      <DependentUpon>UIF_LicenceVehicleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_NaturalPerson.resx">
+      <DependentUpon>UIF_NaturalPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Options.resx">
+      <DependentUpon>UIF_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Payment.resx">
+      <DependentUpon>UIF_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Payment_List.resx">
+      <DependentUpon>UIF_Payment_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_POS_AutoTiming.resx">
+      <DependentUpon>UIF_POS_AutoTiming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_POS_AutoTiming_01.resx">
+      <DependentUpon>UIF_POS_AutoTiming_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_POS_AutoTiming_02.resx">
+      <DependentUpon>UIF_POS_AutoTiming_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_PTS.resx">
+      <DependentUpon>UIF_PTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Selector_Array.resx">
+      <DependentUpon>UIF_Selector_Array.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_SellInfo.resx">
+      <DependentUpon>UIF_SellInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_ServiceOuter.resx">
+      <DependentUpon>UIF_ServiceOuter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_ServiceOuter_List.resx">
+      <DependentUpon>UIF_ServiceOuter_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIF_Supervisor.resx">
+      <DependentUpon>UIF_Supervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIInquiryPrompt.resx">
+      <DependentUpon>UIInquiryPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIYesNoPrompt.resx">
+      <DependentUpon>UIYesNoPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_CallToClient.resx">
+      <DependentUpon>UI_CallToClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Invoice.resx">
+      <DependentUpon>UI_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_InvoiceList.resx">
+      <DependentUpon>UI_InvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_InvoicePay.resx">
+      <DependentUpon>UI_InvoicePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_InvoicePayList.resx">
+      <DependentUpon>UI_InvoicePayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V1_UIF_CardRate.resx">
+      <DependentUpon>V1_UIF_CardRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V1_UIF_CardRateManager.resx">
+      <DependentUpon>V1_UIF_CardRateManager.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSetPersonal.xsc">
+      <DependentUpon>DataSetPersonal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPersonal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPersonal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPersonal.xss">
+      <DependentUpon>DataSetPersonal.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

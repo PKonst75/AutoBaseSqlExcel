@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="imageList1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </data>
+  <data name="buttonNewBrand.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////3d3
+        d3d3d3d3d3d3d3d3d3d3cAAAAAAHd3cDMzMzMzB3dwMzMzMzMHd3AzMzMzMwd3cDMzMzMzB3dwMzMzMz
+        MHd3AzMzszswt3cDMzM7Ozt3dwMzMzO7sHd3AzMzu7m7t3cDMzB3u7d3d3AAB3t7e3d3d3d3t3t3t3d3
+        d3d3d3d3
+</value>
+  </data>
+  <data name="buttonDelModel.Image" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAADEDgAAxA4AAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP/A3MD/8Mqm/wQEBP8ICAj/DAwM/xEREf8WFhb/HBwc/yIi
+        Iv8pKSn/VVVV/01NTf9CQkL/OTk5/4B8//9QUP//kwDW///szP/G1u//1ufn/5Cprf8AADP/AABm/wAA
+        mf8AAMz/ADMA/wAzM/8AM2b/ADOZ/wAzzP8AM///AGYA/wBmM/8AZmb/AGaZ/wBmzP8AZv//AJkA/wCZ
+        M/8AmWb/AJmZ/wCZzP8Amf//AMwA/wDMM/8AzGb/AMyZ/wDMzP8AzP//AP9m/wD/mf8A/8z/MwAA/zMA
+        M/8zAGb/MwCZ/zMAzP8zAP//MzMA/zMzM/8zM2b/MzOZ/zMzzP8zM///M2YA/zNmM/8zZmb/M2aZ/zNm
+        zP8zZv//M5kA/zOZM/8zmWb/M5mZ/zOZzP8zmf//M8wA/zPMM/8zzGb/M8yZ/zPMzP8zzP//M/8z/zP/
+        Zv8z/5n/M//M/zP///9mAAD/ZgAz/2YAZv9mAJn/ZgDM/2YA//9mMwD/ZjMz/2YzZv9mM5n/ZjPM/2Yz
+        //9mZgD/ZmYz/2ZmZv9mZpn/ZmbM/2aZAP9mmTP/Zplm/2aZmf9mmcz/Zpn//2bMAP9mzDP/ZsyZ/2bM
+        zP9mzP//Zv8A/2b/M/9m/5n/Zv/M/8wA////AMz/mZkA/5kzmf+ZAJn/mQDM/5kAAP+ZMzP/mQBm/5kz
+        zP+ZAP//mWYA/5lmM/+ZM2b/mWaZ/5lmzP+ZM///mZkz/5mZZv+ZmZn/mZnM/5mZ//+ZzAD/mcwz/2bM
+        Zv+ZzJn/mczM/5nM//+Z/wD/mf8z/5nMZv+Z/5n/mf/M/5n////MAAD/mQAz/8wAZv/MAJn/zADM/5kz
+        AP/MMzP/zDNm/8wzmf/MM8z/zDP//8xmAP/MZjP/mWZm/8xmmf/MZsz/mWb//8yZAP/MmTP/zJlm/8yZ
+        mf/Mmcz/zJn//8zMAP/MzDP/zMxm/8zMmf/MzMz/zMz//8z/AP/M/zP/mf9m/8z/mf/M/8z/zP///8wA
+        M///AGb//wCZ/8wzAP//MzP//zNm//8zmf//M8z//zP///9mAP//ZjP/zGZm//9mmf//Zsz/zGb///+Z
+        AP//mTP//5lm//+Zmf//mcz//5n////MAP//zDP//8xm///Mmf//zMz//8z/////M//M/2b///+Z////
+        zP9mZv//Zv9m/2b/////Zmb//2b/////Zv8hAKX/X19f/3d3d/+Ghob/lpaW/8vLy/+ysrL/19fX/93d
+        3f/j4+P/6urq//Hx8f/4+Pj/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////wcH
+        BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwf3kuzr7AcHBwcHBwcHB/TiGRni9BmS+LwH
+        BwcHB/QJGQkJu5iYwu7sBwcHBwfz1dwZCZcCLVXC7PEHBwcHGdXb3AmYT5eYu5HwBwcHBwnc3NwJu5iY
+        mAi07gcHBwcJ3AkJCZgIl0+Yu+8HBwcH3BkZGRm7d04CmBmSBwcH8+Li4uL09QiYeAj17AcHB/MZ9OLi
+        GRkJGRn0//gHBwcHGRkZGQnV1dvc3PX4BwcHBwcHBwcHBxnb29vc+AcHBwcHBwcHBwcHBxnb2wcHBwcH
+        BwcHBwcHBwcHBwcHBwc=
+</value>
+  </data>
+  <data name="$this.Name">
+    <value>FormManageBrand</value>
+  </data>
+</root>
